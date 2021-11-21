@@ -10,11 +10,21 @@
             type="com.applsh.baseapplication.ui.some.SomeViewModel" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".ui.some.SomeFragment">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="@={someViewModel.flow}" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{someViewModel.flow}" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
 </layout>
